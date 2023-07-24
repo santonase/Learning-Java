@@ -1,10 +1,17 @@
 package org.example;
 
-//Возведите число «1.4234» в степень 3. Округлите число к большему и выведите его на экран.
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(Math.round(Math.pow(1.4234, 3)));
 
+        System.out.println("Enter number 7");
+        Scanner scanner = new Scanner(System.in);
+        int number = scanner.nextInt();
+        while (number != 7) {
+            System.out.println("Enter number 7 again");
+            number = scanner.nextInt();
+        }
+        System.out.println("Number is 7 !!!");
     }
 }
