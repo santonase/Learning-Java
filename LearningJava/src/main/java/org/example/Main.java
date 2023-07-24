@@ -1,15 +1,19 @@
 package org.example;
 
+
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int number;
+
+        System.out.println("Your name: ");
         Scanner scanner = new Scanner(System.in);
-        do {
-            System.out.println("Enter number 7");
-            number = scanner.nextInt();
-        } while (number != 7);
-        System.out.println("Number is 7 !!!");
+        String name = scanner.nextLine();
+
+        System.out.println(" Your age: ");
+        int age = scanner.nextInt();
+
+        System.out.printf("Name: %s, Age: %d", name, age);
+
     }
 }
