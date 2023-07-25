@@ -1,5 +1,6 @@
 package org.example;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 import static java.lang.System.*;
@@ -7,57 +8,23 @@ import static java.lang.System.*;
 public class Main {
     public static void main(String[] args) {
 
-        //Task-1:
+        //lesson 10 - hw
+
+        int[] arr = new int[5];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] += i;
+        }
+        out.println(Arrays.toString(arr));
+
         Scanner scanner = new Scanner(in);
-        out.println("Enter your age: ");
-        int age = scanner.nextInt();
-
-        if (age <= 13) {
-            out.println("You have not access");
-        } else if (age >= 14 && age <= 17) {
-            out.println("You have part access");
-        } else {
-            out.println("You have full access");
+        while(true) {
+            out.println("Enter something: ");
+            String result = scanner.nextLine();
+            if(result.equalsIgnoreCase("stop") || result.equals(""))
+                break;
         }
-
-        //TASK-2:
-        Scanner scanner1 = new Scanner(in);
-        out.println("Enter first number: ");
-        double firstNumber = scanner1.nextDouble();
-        out.println("Enter second number: ");
-        double secondNumber = scanner1.nextDouble();
-        out.println("Enter operator");
-        char operator = scanner1.next().charAt(0);
-
-        switch (operator) {
-            case '+':
-            out.println(firstNumber + secondNumber);
-            break;
-
-            case '-':
-                out.println(firstNumber - secondNumber);
-                break;
-
-            case '*':
-                out.println(firstNumber * secondNumber);
-                break;
-
-            case '/':
-                out.println(firstNumber / secondNumber);
-                break;
-
-            case '%':
-                out.println(firstNumber % secondNumber);
-                break;
-
-            default:
-                out.println("Error");
-        }
-
-
-
-
 
 
     }
 }
+
