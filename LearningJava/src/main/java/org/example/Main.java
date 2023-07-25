@@ -9,16 +9,20 @@ public class Main {
     public static void main(String[] args) {
 
 
-        Scanner scanner = new Scanner(in);
-        out.println("Your min number: ");
-        int min = scanner.nextInt();
-        out.println("Your max number: ");
-        int max = scanner.nextInt();
-        Random r = new Random();
+        Scanner scanner = new Scanner(System.in);
 
-        for(int i = 0; i < 10; i++) {
-            int result = r.nextInt(max - min) + min;
-            out.println(result);
-        }
+        System.out.printf("min random: ");
+        int min = scanner.nextInt();
+
+        System.out.printf("Max random: ");
+        int max = scanner.nextInt();
+
+        int ran = min +  (int)(Math.random()* max);
+
+        System.out.println(ran);
+        out.println(min);
+        out.println(max);
+
+        
     }
 }
