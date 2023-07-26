@@ -1,30 +1,36 @@
 package org.example;
 
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.*;
 
 import static java.lang.System.*;
 
 public class Main {
     public static void main(String[] args) {
 
-        //lesson 10 - hw
+                Scanner scan = new Scanner(System.in);
+                HashMap<String,List<String>> students = new HashMap<>();
 
-        int[] arr = new int[5];
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] += i;
+                while(true){
+                    System.out.println("Enter City ");
+                    String city = scan.nextLine();
+                    if ( city.equalsIgnoreCase("stop") || city.isEmpty())  break;
+
+                    System.out.println("Enter PIB ");
+                    String pib = scan.nextLine();
+                    if (pib.equalsIgnoreCase("stop") || pib.isEmpty())  break;
+
+                    else if (students.containsKey(city)){
+                        students.get(city).add(pib);
+                    }
+                    else {
+                        ArrayList<String> pibs = new ArrayList<>();
+                        pibs.add(pib);
+                        students.put(city, pibs);
+                    }
+                }
+                out.println(students);
+            }
         }
-        out.println(Arrays.toString(arr));
-
-        Scanner scanner = new Scanner(in);
-        while(true) {
-            out.println("Enter something: ");
-            String result = scanner.nextLine();
-            if(result.equalsIgnoreCase("stop") || result.equals(""))
-                break;
-        }
 
 
-    }
-}
 
