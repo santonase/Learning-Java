@@ -16,19 +16,21 @@ public class Main {
                     if ( city.equalsIgnoreCase("stop") || city.isEmpty())  break;
 
                     System.out.println("Enter PIB ");
-                    String pib = scan.nextLine();
-                    if (pib.equalsIgnoreCase("stop") || pib.isEmpty())  break;
+                    String lastName = scan.nextLine();
+                    if (lastName.equalsIgnoreCase("stop") || lastName.isEmpty())  break;
 
                     else if (students.containsKey(city)){
-                        students.get(city).add(pib);
+                        students.get(city).add(lastName);
                     }
                     else {
-                        ArrayList<String> pibs = new ArrayList<>();
-                        pibs.add(pib);
-                        students.put(city, pibs);
+                        ArrayList<String> lastNames = new ArrayList<>();
+                        lastNames.add(lastName);
+                        students.put(city, lastNames);
+                        out.println("Pibs: "+lastNames);
+                        out.println("Students__: "+students);
                     }
                 }
-                out.println(students);
+                out.println("Students: "+students);
             }
         }
 
