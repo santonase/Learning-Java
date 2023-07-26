@@ -26,7 +26,7 @@ public class Main {
                         ArrayList<String> lastNames = new ArrayList<>();
                         lastNames.add(lastName);
                         students.put(city, lastNames);
-                        out.println("Pibs: "+lastNames);
+                        out.println("LastNames: "+lastNames);
                         out.println("Students__: "+students);
                     }
                 }
