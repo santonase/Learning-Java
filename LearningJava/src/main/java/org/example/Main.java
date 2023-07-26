@@ -8,29 +8,37 @@ public class Main {
     public static void main(String[] args) {
 
                 Scanner scan = new Scanner(System.in);
-                HashMap<String,List<String>> students = new HashMap<>();
+                HashMap<String, String> users = new HashMap<>();
+                users.put("admin", "root");
+                users.put("user", "qwerty");
+                users.put("test", "password");
 
-                while(true){
-                    System.out.println("Enter City ");
-                    String city = scan.nextLine();
-                    if ( city.equalsIgnoreCase("stop") || city.isEmpty())  break;
+                Scanner scanner = new Scanner(in);
+                out.print("Enter your login: ");
+                String login = scanner.nextLine();
 
-                    System.out.println("Enter PIB ");
-                    String lastName = scan.nextLine();
-                    if (lastName.equalsIgnoreCase("stop") || lastName.isEmpty())  break;
+                if (users.containsKey(login)) {
+                    out.print("Enter your password: ");
+                    String password = scan.nextLine();
 
-                    else if (students.containsKey(city)){
-                        students.get(city).add(lastName);
+                    while (true) {
+                        if (password.equals("")) {
+                            out.println("Wrong password");
+                            break;
+                        }
+
+                        if (users.get(login).equals(password)) {
+                            out.println("Success! Welcome!");
+                            break;
+                        }
+
+                        out.println("Wrong password! Enter password again: ");
+                        password = scanner.nextLine();
                     }
-                    else {
-                        ArrayList<String> lastNames = new ArrayList<>();
-                        lastNames.add(lastName);
-                        students.put(city, lastNames);
-                        out.println("LastNames: "+lastNames);
-                        out.println("Students__: "+students);
-                    }
+                } else {
+                    out.println("Sorry, this user doesn't exist");
                 }
-                out.println("Students: "+students);
+
             }
         }
 
