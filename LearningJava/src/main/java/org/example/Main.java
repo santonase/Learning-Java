@@ -7,38 +7,11 @@ import static java.lang.System.*;
 public class Main {
     public static void main(String[] args) {
 
-                Scanner scan = new Scanner(System.in);
-                HashMap<String, String> users = new HashMap<>();
-                users.put("admin", "root");
-                users.put("user", "qwerty");
-                users.put("test", "password");
+        Professor professorAlex = new Professor("Alex", "Professor", 10);
+        out.println(professorAlex.mail("You need learn"));
 
-                Scanner scanner = new Scanner(in);
-                out.print("Enter your login: ");
-                String login = scanner.nextLine();
-
-                if (users.containsKey(login)) {
-                    out.print("Enter your password: ");
-                    String password = scan.nextLine();
-
-                    while (true) {
-                        if (password.equals("")) {
-                            out.println("Wrong password");
-                            break;
-                        }
-
-                        if (users.get(login).equals(password)) {
-                            out.println("Success! Welcome!");
-                            break;
-                        }
-
-                        out.println("Wrong password! Enter password again: ");
-                        password = scanner.nextLine();
-                    }
-                } else {
-                    out.println("Sorry, this user doesn't exist");
-                }
-
+        professorAlex.setSurname("AAAlexxx");
+        out.println(professorAlex.getSurname());
             }
         }
 
