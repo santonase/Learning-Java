@@ -10,4 +10,13 @@ public class Student extends User {
         this.yearOfStudy = yearOfStudy;
         this.groupNumber = groupNumber;
     }
+
+    String mail(String message) {
+        return "Student: " + super.getName() + ": " + message;
+    }
+
+    @Override
+    public String getSurname() {
+        return super.getSurname().charAt(0) + ".";
+    }
 }

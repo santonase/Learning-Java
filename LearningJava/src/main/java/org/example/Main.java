@@ -10,16 +10,18 @@ public class Main {
         Professor professorAlex = new Professor("Alex", "Professor", 10);
         out.println(professorAlex.mail("You have to learn"));
 
-        Student studentNick = new Student("Nick", "Student", 1, 2);
+        Student studentNick = new Student("Nick", "Lee", 1, 2);
         out.println(studentNick.mail("I'm learning"));
 
         professorAlex.setSurname("AAAlexxx");
         out.println(professorAlex.getSurname());
 
-        List<User> userList = new ArrayList<>();
-        userList.add(professorAlex);
-        userList.add(studentNick);
-        out.println(userList);
+        professorAlex.mail("111");
+        professorAlex.mail("222");
+        professorAlex.mail("333");
+        out.println(professorAlex.getMsgSent());
+
+        out.println(studentNick.getSurname());
             }
         }
 
