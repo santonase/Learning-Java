@@ -16,6 +16,14 @@ public class Professor extends User {
         return super.mail(message);
     }
 
+    public  String mail(String message, String studentSurname) {
+        return "Professor " + getName() + " send to " + studentSurname + ": " + message;
+    }
+
+    public  String mail(double mark, String studentSurname) {
+        return "Professor " + getName() + " put the mark to " + studentSurname + ": " + mark;
+    }
+
     public int getMsgSent() {
         return msgSent;
     }

@@ -16,12 +16,8 @@ public class Main {
         professorAlex.setSurname("AAAlexxx");
         out.println(professorAlex.getSurname());
 
-        professorAlex.mail("111");
-        professorAlex.mail("222");
-        professorAlex.mail("333");
-        out.println(professorAlex.getMsgSent());
-
-        out.println(studentNick.getSurname());
+        out.println(professorAlex.mail("Hello, how are you?", studentNick.getSurname()));
+        out.println(professorAlex.mail(5, studentNick.getSurname()));
             }
         }
 
