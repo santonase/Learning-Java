@@ -2,8 +2,10 @@ package org.example;
 
 import javax.sound.midi.Soundbank;
 import java.sql.SQLOutput;
+import java.util.Scanner;
 
 public class Recursive {
+
 
 
     public static void fibonachi(int a, int b) {

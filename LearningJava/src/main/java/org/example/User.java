@@ -3,10 +3,12 @@ package org.example;
 public class User {
     private String name;
     private String surname;
+    static int userCount = 0;
 
     public User(String name, String surname) {
         this.name = name;
         this.surname = surname;
+        userCount++;
     }
 
     public String getName() {

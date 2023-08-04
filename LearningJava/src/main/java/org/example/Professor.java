@@ -3,6 +3,7 @@ package org.example;
 public class Professor extends User {
     private int experience;
     private int msgSent;
+    public String department = "computer science";
 
     Professor(String name, String surname, int experience) {
         super(name, surname);

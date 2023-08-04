@@ -14,7 +14,13 @@ public class Main {
 
 //        Recursive.factorial(5);
 
-        Recursive.fibonachi(1,1);
+        Professor professorAlex = new Professor("ALex", "Lee", 10);
+        Professor professorNick = new Professor("Nick", "hoo", 11);
+        out.println(User.userCount);
+        out.println(professorAlex.department);
+
+
+//        Recursive.fibonachi(1,1);
 
 
     }
