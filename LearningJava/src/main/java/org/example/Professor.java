@@ -1,6 +1,6 @@
 package org.example;
 
-public class Professor extends User {
+public non-sealed class Professor extends Employee {
     private int experience;
     private int msgSent;
     public String department = "computer science";
@@ -9,6 +9,11 @@ public class Professor extends User {
         super(name, surname);
         this.experience = experience;
         msgSent = 0;
+    }
+
+    @Override
+    public void mail() {
+        System.out.println("Hello, World");
     }
 
     @Override

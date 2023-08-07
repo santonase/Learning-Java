@@ -1,6 +1,6 @@
 package org.example;
 
-public class User {
+public abstract class User {
     private String name;
     private String surname;
     static int userCount = 0;
@@ -10,6 +10,8 @@ public class User {
         this.surname = surname;
         userCount++;
     }
+
+    public abstract void mail();
 
     public String getName() {
         return name;

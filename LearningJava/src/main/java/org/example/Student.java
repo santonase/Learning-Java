@@ -1,6 +1,6 @@
 package org.example;
 
-public class Student extends User {
+public final class Student extends User {
 
     int yearOfStudy;
     int groupNumber;
@@ -13,6 +13,11 @@ public class Student extends User {
 
     String mail(String message) {
         return "Student: " + super.getName() + ": " + message;
+    }
+
+    @Override
+    public void mail() {
+        System.out.println("Hello, World");
     }
 
     @Override
