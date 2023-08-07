@@ -27,6 +27,8 @@ public class User {
         this.surname = surname;
     }
 
+
+
     String mail(String message) {
         return name + ": " + message;
     }
